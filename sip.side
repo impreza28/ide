@@ -1,0 +1,673 @@
+{
+  "id": "651e7456-ead8-4cd0-a814-9c19bf11df01",
+  "version": "2.0",
+  "name": "SELENIUM IDE 3",
+  "url": "https://open-eshop.stqa.ru/",
+  "tests": [{
+    "id": "6411b0e5-4594-4dcc-8c50-254db3ec61d7",
+    "name": "Задание 2: создание купона",
+    "commands": [{
+      "id": "eaf040e7-8bdc-483d-aa82-08f78c21d2b2",
+      "comment": "",
+      "command": "open",
+      "target": "/oc-panel",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62b868f8-9cc4-41d2-ab88-d526b8f6a1ac",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1416",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f8708bd-0230-491a-aa87-bc82f5c2ce52",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [],
+      "value": "Login_Email"
+    }, {
+      "id": "0cfb1b89-d152-477c-ae70-5198e5a584ee",
+      "comment": "",
+      "command": "if",
+      "target": "${Login_Email} >0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14294bea-4659-4312-a932-3d3e0f139369",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "030b75ec-2fa2-449e-8237-a9b07e51ef4e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='password']",
+      "targets": [],
+      "value": "demo"
+    }, {
+      "id": "011ecedd-2ca0-456c-b151-ebc5f38d5b48",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//section[@id='page']//div/button[@type='submit']",
+      "targets": [
+        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/form/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3648c80-daae-4032-83ed-70c82adbed65",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28c95d52-4c15-4260-bb66-88a6d6480f4e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.title-txt.active",
+      "targets": [
+        ["css=.css\\=\\.title-txt\\.active", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'eShop')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "c65ef46c-0a07-4090-ac15-ec699a9e5e77",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.btn-primary-white",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-primary-white", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/login#login-modal')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,' Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c020aeac-41df-47a1-9618-fc7102be6646",
+      "comment": "",
+      "command": "click",
+      "target": "css=.title-txt.active",
+      "targets": [
+        ["linkText=eShop", "linkText"],
+        ["css=.panel:nth-child(1) > .panel-heading a", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapseOne')]", "xpath:href"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,' eShop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ae14735-9ca7-47a1-a1a5-ac5b891628a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.glyphicon.glyphicon-tag",
+      "targets": [
+        ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
+        ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coupons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51a0ad42-ade6-47e9-bd99-95072c5478c2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.table-responsive",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "276d84fd-e403-49b7-82a8-09af3152bda6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='content']/a",
+      "targets": [
+        ["css=.pull-right:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/create')]", "xpath:href"],
+        ["xpath=//body/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca97dd73-181d-4c87-8ff3-5e89a6403cc3",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=name",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "6a0efbfe-a8bc-4dd2-a8d1-4fcf96090361",
+      "comment": "",
+      "command": "store",
+      "target": "TestVSK2",
+      "targets": [],
+      "value": "VSK"
+    }, {
+      "id": "9b1b5bb1-d8b4-4f47-bdde-24ef4088a4c9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=name",
+      "targets": [],
+      "value": "${VSK}"
+    }, {
+      "id": "48b8d247-88b2-4ee0-a43b-0e5c86369870",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=discount_amount",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "a49ac5c6-fd9f-4012-94f0-1d7d4985e092",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=valid_date",
+      "targets": [],
+      "value": "2021-07-14"
+    }, {
+      "id": "da8ad85d-8907-4f70-9fbb-a969746563b8",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/div/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a32daa39-09e9-49a2-9c98-2440263caf9d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//td[contains(.,'${VSK}')]",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "ea20664e-825e-4760-8764-cdc2531b3ed6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td[contains(.,'${VSK}')]",
+      "targets": [
+        ["css=#tr11838 > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[@id='tr11838']/td", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/div/div/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'TestVSK2')]", "xpath:innerText"]
+      ],
+      "value": "${VSK}"
+    }, {
+      "id": "276fb8b6-2bc2-48b5-aa8e-bf300fc09909",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert.alert-success > .alert-heading",
+      "targets": [
+        ["css=.alert-heading", "css:finder"],
+        ["xpath=//div[@id='content']/div/h4", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/div/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Success')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7185f0c0-5057-454b-8318-0aa8c0fe9f35",
+    "name": "Задание 3: поиск и удаление купона",
+    "commands": [{
+      "id": "cf8a273e-3881-4d8f-9985-276560076bf6",
+      "comment": "",
+      "command": "open",
+      "target": "/oc-panel/Coupon",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "663680a9-03c3-4084-bbc0-478034beba98",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1416",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7932188-77c9-4c7f-934f-88b33dab4620",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [],
+      "value": "Login_Email"
+    }, {
+      "id": "995beee8-704e-4744-b498-cff04c513157",
+      "comment": "",
+      "command": "if",
+      "target": "${Login_Email} >0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a063af4-1499-428c-b111-d3089048ab0d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "a3b3ccb6-941a-4d38-a00a-5c33b96fa18f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='password']",
+      "targets": [],
+      "value": "demo"
+    }, {
+      "id": "30c46dce-2e8f-44ae-a606-64ce3b79df8d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//section[@id='page']//div/button[@type='submit']",
+      "targets": [
+        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/form/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6525bdfb-1aa8-4d5b-9d6c-3e6209ff6fde",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34708d28-7066-4c5f-975e-1638f5d1cb77",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "name=name",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "5f7c63ba-8615-4f00-9c16-e4e8769fe90b",
+      "comment": "",
+      "command": "store",
+      "target": "TestVSK2",
+      "targets": [],
+      "value": "VSK"
+    }, {
+      "id": "3eab6f59-1892-4296-a513-89863a865cc2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=name",
+      "targets": [],
+      "value": "${VSK}"
+    }, {
+      "id": "1a3e5381-f769-451a-be0e-f5e6c791a483",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-inline.pull-right > .btn",
+      "targets": [
+        ["css=.form-inline > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4816245-aec0-4397-9576-ebbc98ee5872",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-danger",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "949db5e0-714d-4c02-9786-75c12ce7bddb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@class='table-responsive']//tbody/tr[1]",
+      "targets": [
+        ["css=#tr12091 > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[@id='tr12091']/td", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div/div/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'TestVSK2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d400578-ddd5-4aab-9071-cc07b99b2450",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@class='table-responsive']//tbody/tr[2]",
+      "targets": [
+        ["css=#tr12024 > td:nth-child(1)", "css:finder"],
+        ["xpath=//tr[@id='tr12024']/td", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div/div/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'TestVSK2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95bf393a-f728-478e-9c11-1863607b0569",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=name",
+      "targets": [],
+      "value": "${VSK}"
+    }, {
+      "id": "e57594d3-b479-4f42-8bcc-5c19757bcc58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//tr[@id='tr11832']/td[7]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/delete/11832')]", "xpath:href"],
+        ["xpath=//td[7]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f758251-dd84-4cf7-9a4f-0966df2892b5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.sweet-alert.showSweetAlert.visible",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "7fc1e0bb-c6d3-45ac-b273-462df28ff5d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.confirm",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Yes, definitely!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfa17d94-239d-44e3-85d0-9b68471ff494",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.form-inline > .btn",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "53ddf5d1-c8af-403d-9d16-ed99cd57cf43",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.table-responsive",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9d403a01-b405-46b5-8914-c7c6eda16f37",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//td[contains(.,'${VSK}')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "921720bc-e135-4e9e-be0c-c0050a9c8605",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-inline > .btn",
+      "targets": [
+        ["css=.form-inline > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc542d06-c171-43e1-bdb5-4b49a8619576",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//td[contains(.,'${VSK}')]",
+      "targets": [],
+      "value": "${VSK}"
+    }, {
+      "id": "a40e689b-fab6-4b63-964c-b219f2f4e5bb",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "aa4b7f70-ee01-431f-b36a-c8213ca52f4c",
+    "name": "Задание 1: авторизация",
+    "commands": [{
+      "id": "43feadee-fb82-4e9b-907f-c9dd110d8eb5",
+      "comment": "",
+      "command": "open",
+      "target": "/oc-panel/auth/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5a0da42-8de7-43e7-a932-c9d2651ee61b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1416",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebe596de-bfde-43c8-82b6-695726e1688f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [],
+      "value": "Login_Email"
+    }, {
+      "id": "ea59182d-d137-40d1-9847-1a1d0891ffe6",
+      "comment": "",
+      "command": "if",
+      "target": "${Login_Email} >0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fab6c814-400d-4e98-b769-706115f3576d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "0d64765f-771f-4cb6-a5e6-79ab999ac3f9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "e7f6c91a-ccf6-41de-8689-3623ae05e0ff",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='password']",
+      "targets": [],
+      "value": "demo"
+    }, {
+      "id": "b36fd376-7d8d-4f0a-b603-069c4af7098f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//section[@id='page']//div/button[@type='submit']",
+      "targets": [
+        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/form/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7634527e-ee36-4945-843c-2759930ca2c8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6439334c-0f2a-48d2-bbd3-4b1c146b2f9a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.navbar-btn > .glyphglyphicon",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "0ca1a550-0641-40dd-88a5-03f0936c8316",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.btn-primary-white",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-primary-white", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/login#login-modal')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,' Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f04787b-218b-4393-8b73-5e7f0e71e697",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5f056fc4-7187-4d57-8c9d-b765e36ef309",
+    "name": "Задание 4: выход",
+    "commands": [{
+      "id": "a0795a0d-9159-4aff-9ab6-e767acde057d",
+      "comment": "",
+      "command": "open",
+      "target": "/oc-panel/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df608b02-c197-4489-bbd3-9193fd3a9274",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1416",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f631c8f-2705-4012-bc91-1ab3f0be1882",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [],
+      "value": "Login_Email"
+    }, {
+      "id": "2e24d2f0-f77c-4ff6-957d-b196cde8e210",
+      "comment": "",
+      "command": "if",
+      "target": "${Login_Email} >0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9883350f-6877-4946-9569-d893e8096c7d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='email']",
+      "targets": [
+        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "a34c8e5f-a3f2-4273-a10f-02768b4105f9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//section[@id='page']//input[@name='password']",
+      "targets": [],
+      "value": "demo"
+    }, {
+      "id": "aa6ff3d1-bbdb-453c-b30c-dbc9f2b9b834",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//section[@id='page']//div/button[@type='submit']",
+      "targets": [
+        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/form/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccfe23f0-13ba-45a2-b1b0-1a5f2793a87b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad324f1c-7883-4bb7-95d7-bb58f703b479",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn.dropdown-toggle.btn-success.navbar-btn",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "0add20d0-165b-4ce1-9261-fbee1152b7af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn.dropdown-toggle.btn-success.navbar-btn",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc45ff0f-a0ce-4f1f-9c54-cfaece1dd9ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.glyphicon.glyphglyphicon.glyphicon-off",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/logout')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed165124-684b-4efc-bfad-e39be2548e2f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.btn-primary-white",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "81067097-712c-4556-92dc-ec4202736a93",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.navbar-btn > .glyphglyphicon",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e5cdff91-40a9-4586-88ba-cf5f233f7241",
+    "name": "Урок 2",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aa4b7f70-ee01-431f-b36a-c8213ca52f4c", "6411b0e5-4594-4dcc-8c50-254db3ec61d7", "7185f0c0-5057-454b-8318-0aa8c0fe9f35", "5f056fc4-7187-4d57-8c9d-b765e36ef309"]
+  }],
+  "urls": ["https://open-eshop.stqa.ru/", "https://www.avito.ru/volgograd", "http://open-eshop.stqa.ru/"],
+  "plugins": []
+}

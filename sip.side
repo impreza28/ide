@@ -544,121 +544,6 @@
       "targets": [],
       "value": ""
     }]
-  }, {
-    "id": "5f056fc4-7187-4d57-8c9d-b765e36ef309",
-    "name": "Задание 4: выход",
-    "commands": [{
-      "id": "a0795a0d-9159-4aff-9ab6-e767acde057d",
-      "comment": "",
-      "command": "open",
-      "target": "/oc-panel/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "df608b02-c197-4489-bbd3-9193fd3a9274",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "2576x1416",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6f631c8f-2705-4012-bc91-1ab3f0be1882",
-      "comment": "",
-      "command": "storeXpathCount",
-      "target": "xpath=//section[@id='page']//input[@name='email']",
-      "targets": [],
-      "value": "Login_Email"
-    }, {
-      "id": "2e24d2f0-f77c-4ff6-957d-b196cde8e210",
-      "comment": "",
-      "command": "if",
-      "target": "${Login_Email} >0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9883350f-6877-4946-9569-d893e8096c7d",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "xpath=//section[@id='page']//input[@name='email']",
-      "targets": [
-        ["css=.well:nth-child(3) > .form-group:nth-child(1) .form-control", "css:finder"],
-        ["xpath=(//input[@name='email'])[4]", "xpath:attributes"],
-        ["xpath=//section[@id='page']/form/div/div/input", "xpath:idRelative"],
-        ["xpath=//section/form/div/div/input", "xpath:position"]
-      ],
-      "value": "demo@open-eshop.com"
-    }, {
-      "id": "a34c8e5f-a3f2-4273-a10f-02768b4105f9",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "xpath=//section[@id='page']//input[@name='password']",
-      "targets": [],
-      "value": "demo"
-    }, {
-      "id": "aa6ff3d1-bbdb-453c-b30c-dbc9f2b9b834",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//section[@id='page']//div/button[@type='submit']",
-      "targets": [
-        ["css=.well:nth-child(3) .btn-primary", "css:finder"],
-        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
-        ["xpath=//section[@id='page']/form/div[4]/button", "xpath:idRelative"],
-        ["xpath=//section/form/div[4]/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ccfe23f0-13ba-45a2-b1b0-1a5f2793a87b",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ad324f1c-7883-4bb7-95d7-bb58f703b479",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "css=.btn.dropdown-toggle.btn-success.navbar-btn",
-      "targets": [],
-      "value": "10000"
-    }, {
-      "id": "0add20d0-165b-4ce1-9261-fbee1152b7af",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn.dropdown-toggle.btn-success.navbar-btn",
-      "targets": [
-        ["css=.btn:nth-child(2)", "css:finder"],
-        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
-        ["xpath=//a[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "cc45ff0f-a0ce-4f1f-9c54-cfaece1dd9ad",
-      "comment": "",
-      "command": "click",
-      "target": "css=.glyphicon.glyphglyphicon.glyphicon-off",
-      "targets": [
-        ["linkText=Logout", "linkText"],
-        ["css=li:nth-child(6) > a", "css:finder"],
-        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/logout')]", "xpath:href"],
-        ["xpath=//li[6]/a", "xpath:position"],
-        ["xpath=//a[contains(.,' Logout')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ed165124-684b-4efc-bfad-e39be2548e2f",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "css=.btn-primary-white",
-      "targets": [],
-      "value": "10000"
-    }, {
-      "id": "81067097-712c-4556-92dc-ec4202736a93",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "css=.navbar-btn > .glyphglyphicon",
-      "targets": [],
-      "value": ""
-    }]
   }],
   "suites": [{
     "id": "e5cdff91-40a9-4586-88ba-cf5f233f7241",
@@ -666,7 +551,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["aa4b7f70-ee01-431f-b36a-c8213ca52f4c", "6411b0e5-4594-4dcc-8c50-254db3ec61d7", "7185f0c0-5057-454b-8318-0aa8c0fe9f35", "5f056fc4-7187-4d57-8c9d-b765e36ef309"]
+    "tests": ["aa4b7f70-ee01-431f-b36a-c8213ca52f4c", "6411b0e5-4594-4dcc-8c50-254db3ec61d7", "7185f0c0-5057-454b-8318-0aa8c0fe9f35"]
   }],
   "urls": ["https://open-eshop.stqa.ru/", "https://www.avito.ru/volgograd", "http://open-eshop.stqa.ru/"],
   "plugins": []
